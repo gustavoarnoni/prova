@@ -8,4 +8,4 @@ import { ViagemModule } from './viagem/viagem.module';
     ViagemModule,
   ],
 })
-export class AppModule {}
+export class AppModule {} 
