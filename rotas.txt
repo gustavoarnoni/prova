@@ -1,0 +1,7 @@
+  1. POST /viagem - Create viagem
+  2. GET /viagem - Get all viagens
+  3. GET /viagem/:id - Get viagem by ID
+  4. PUT /viagem/:id - Update viagem
+  5. DELETE /viagem/:id - Delete viagem
+  6. POST /viagem/:id/destino - Add destination
+  7. DELETE /viagem/:id/destino - Remove destination

@@ -1,7 +1,13 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Document } from 'mongoose';
 
-@Schema()
+@Schema({ timestamps: true })
+export class Destino {
+  @Prop({ required: true })
+  nome: string;
+}
+
+@Schema({ timestamps: true })
 export class Viagem extends Document {
   @Prop({ required: true })
   nome: string;
@@ -14,6 +20,9 @@ export class Viagem extends Document {
 
   @Prop({ required: true })
   valor: number;
+
+  @Prop({ type: [{ nome: String }], default: [] })
+  destinos: Destino[];
 }
 
 export const ViagemSchema = SchemaFactory.createForClass(Viagem);
